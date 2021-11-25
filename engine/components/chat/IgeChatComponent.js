@@ -79,6 +79,21 @@ var IgeChatComponent = IgeEventingClass.extend({
 				$('#show-chat').addClass('d-none');
 				$('#chat-box').removeClass('d-none');
 			});
+
+			// action for showing "How to play" in chat area
+			$('#show-keypress-list').on('click', function () {
+				$('#chat-history').addClass('d-none');
+				$('#keypress-list').removeClass('d-none');
+				$('#hide-keypress-list').removeClass('d-none');
+				$('#show-keypress-list').addClass('d-none');
+			});
+
+			$('#hide-keypress-list').on('click', function () {
+				$('#show-keypress-list').removeClass('d-none');
+				$('#chat-history').removeClass('d-none');
+				$('#hide-keypress-list').addClass('d-none');
+				$('#keypress-list').addClass('d-none');
+			});
 		}
 
 		this.log('Chat component initiated!');

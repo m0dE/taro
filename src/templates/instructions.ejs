@@ -1,0 +1,49 @@
+<!-- instructions button -->
+<div id="instructions-div" style="position: fixed; bottom: 90%; right: 20px">
+    <div class="input-group d-flex justify-content-center">
+      <div class="instructions-button" onclick="">
+        <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modal">Instructions</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- instructions modal -->
+  <div class="modal fade align-items-center" id="modal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h4 class="modal-title"></h4>
+          <button id="custom-modal-dismiss-button" type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+  
+        <div class="modal-body">
+          <p class="mb-5">General Hints and Tips<br>
+            <br>
+              1. Talk and type to your teammates as much as you can<br>
+              2. Explore everywhere and describe everything you find<br>
+              3. Take notes so you don’t forget important details<br>
+              <br>
+          In this Challenge<br>
+          <br>
+              1. Terminals in the factory will flash blue and red if there’s something still to be done<br>
+              2. The screen will tell you when you’re close to an item to interact with (using spacebar) or one to pick up (using P, remembering to leave things behind with L when you want to use something else)<br>
+              3. The email terminal tells you exactly what you need to do to complete the challenge!<br>
+              <br>
+          </p>
+        </div>
+  
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-sm-12">
+              <div id="custom-modal-cancel-container">
+                <button type="button" data-bs-dismiss="modal" id="custom-modal-cancel" class="btn pull-right">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
