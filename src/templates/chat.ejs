@@ -1,12 +1,12 @@
 <!-- chat input field -->
-<div id="chat-input-field-div" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%)">
-    <div class="form-group" id="chat-message-input" style="display: none">
+<div id="chat-input-field-div" style="position: fixed; bottom: 20%; right: 20px;">
+    <div class="form-group" id="chat-message-input">
         <div class="input-group d-flex justify-content-center">
             <form class="mb-0" onsubmit="ige.chat.sendChatMessage(); return false">
-                <input type="text" class="form-control btn-sm" id="message" placeholder="Press Enter to send the message" />
+                <input type="text" class="form-control btn-sm white-placeholder" style="color:white; background-color:rgba(0, 0, 0, 0.5);" id="message" placeholder="Chat with other players" />
             </form>
             <div class="input-group-append" onclick="ige.chat.sendChatMessage()">
-                <button class="btn btn-secondary" type="button">
+                <button class="btn btn-primary" type="button">
                     <i class="fa fa-comment"></i>
                 </button>
             </div>
@@ -20,12 +20,24 @@
         <ul id="tabs" class="nav nav-pills no-selection">
             <li class="nav-item">
                 <a id="hide-chat" class="cursor-pointer hide-on-mobile pr-0 nav-link" style="position: absolute; right: 0;"> Hide </a>
+                <a id="show-keypress-list" class="cursor-pointer hide-on-mobile pr-0 nav-link" style="position: absolute; left: 0;"> Controls </a>
+                <a id="hide-keypress-list" class="cursor-pointer hide-on-mobile pr-0 nav-link d-none" style="position: absolute; left: 0;"> Hide Controls </a>
             </li>
         </ul>
         <div class="tab-content flex-grow-1 d-flex" style="background-color: rgba(0, 0, 0, 0.5); border-radius: 0px 5px 5px 5px">
             <div class="tab-pane fade show active w-100" id="pills-chat" role="tabpanel" aria-labelledby="pills-chat-tab">
                 <div class="h-100 w-100 p-3">
                     <div id="chat-history" class="hide-on-mobile h-100" style="max-height: 200px; overflow: auto; min-width: 350px; min-height: 200px"></div>
+                    <div id="keypress-list" class="hide-on-mobile h-100 d-none" style="max-height: 200px; overflow: auto; min-width: 350px; width: 450px; min-height: 200px"> 
+                       <h4>How To Play</h4>
+                       <ol class="list-group list-group-numbered" >
+                        <li class="list-group-item">"Direction keys" allow you to move around the map.</li>
+                        <li class="list-group-item">"P" lets you pick up objects. These will appear in your item box at the bottom of your screen.</li>
+                        <li class="list-group-item">"Spacebar" lets you use or view objects in your item box or interact with the environment, e.g. doors and terminals.</li>
+                        <li class="list-group-item">"L" lets you leave objects. You can only have one item in your item box at one time, so must leave something to pick another thing up.</li>
+                        <li class="list-group-item">"Enter" lets you send global messages to all players.</li>
+                      </ol>
+                    </div>
                 </div>
             </div>
         </div>
